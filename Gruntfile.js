@@ -3,14 +3,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.initConfig({
         copy: {
-          src: {
-              files: [{
-                  expand: true,
-                  cwd: 'src',
-                  src: '**',
-                  dest: 'build/'
-              }]
-          },
+            src: {
+                files: [{
+                    expand: true,
+                    cwd: 'src',
+                    src: '**',
+                    dest: 'build/'
+                }]
+            },
             semantic: {
                 files: [{
                     expand: true,
@@ -19,12 +19,25 @@ module.exports = function(grunt) {
                     dest: 'build/assets/'
                 }]
             },
-            font: {
+            jquery: {
+                files: [{
+                    expand: true,
+                    cwd: 'node_modules/jquery/dist/',
+                    src: 'jquery.min.js',
+                    dest: 'build/assets/'
+                }]
+            },
+            awesome: {
                 files: [{
                     expand: true,
                     cwd: 'node_modules/font-awesome/fonts/',
                     src: '**',
                     dest: 'build/assets/fonts/'
+                }, {
+                    expand: true,
+                    cwd: 'node_modules/font-awesome/css/',
+                    src: '**',
+                    dest: 'build/assets/css/'
                 }]
             },
             icons: {
@@ -43,6 +56,11 @@ module.exports = function(grunt) {
                     cwd: 'node_modules/octicons/octicons/',
                     src: '*.ttf',
                     dest: 'build/assets/fonts/'
+                }, {
+                    expand: true,
+                    cwd: 'node_modules/octicons/octicons/',
+                    src: 'octicons.css',
+                    dest: 'build/assets/css/'
                 }]
             }
         },
