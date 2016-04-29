@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src',
                     src: '**',
-                    dest: 'build/'
+                    dest: ''
                 }]
             },
             semantic: {
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'semantic/dist/',
                     src: '**',
-                    dest: 'build/assets/'
+                    dest: 'assets/'
                 }]
             },
             jquery: {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'node_modules/jquery/dist/',
                     src: 'jquery.min.js',
-                    dest: 'build/assets/'
+                    dest: 'assets/'
                 }]
             },
             awesome: {
@@ -32,12 +32,12 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'node_modules/font-awesome/fonts/',
                     src: '**',
-                    dest: 'build/assets/fonts/'
+                    dest: 'assets/fonts/'
                 }, {
                     expand: true,
                     cwd: 'node_modules/font-awesome/css/',
                     src: '**',
-                    dest: 'build/assets/css/'
+                    dest: 'assets/css/'
                 }]
             },
             icons: {
@@ -45,27 +45,27 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'node_modules/octicons/octicons/',
                     src: '*.eot',
-                    dest: 'build/assets/fonts/'
+                    dest: 'assets/fonts/'
                 }, {
                     expand: true,
                     cwd: 'node_modules/octicons/octicons/',
                     src: 'octicons.woff',
-                    dest: 'build/assets/fonts/'
+                    dest: 'assets/fonts/'
                 }, {
                     expand: true,
                     cwd: 'node_modules/octicons/octicons/',
                     src: '*.ttf',
-                    dest: 'build/assets/fonts/'
+                    dest: 'assets/fonts/'
                 }, {
                     expand: true,
                     cwd: 'node_modules/octicons/octicons/',
                     src: 'octicons.css',
-                    dest: 'build/assets/css/'
+                    dest: 'assets/css/'
                 }]
             }
         },
         clean: {
-            files: ['build/']
+            files: ['assets/','partials/','*.hbs']
         }
     });
 
